@@ -8,9 +8,9 @@ class Project(models.Model):
         return self.name
 
 class Task(models.Model):
-    tittle = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)  #
     description = models.TextField()
-    priject = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)  
     done = models.BooleanField(default=False)
 
        #cuando se crea una funcion dentro de una clase se llama metodo
